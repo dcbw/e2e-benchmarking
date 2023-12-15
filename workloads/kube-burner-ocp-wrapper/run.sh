@@ -22,7 +22,7 @@ RETRY_DELAY=5
 download_binary(){
   local retries=0
   while [ $retries -lt $MAX_RETRIES ]; do
-    KUBE_BURNER_URL="https://github.com/cloud-bulldozer/kube-burner/releases/download/v${KUBE_BURNER_VERSION}/kube-burner-V${KUBE_BURNER_VERSION}-linux-x86_64.tar.gz"
+    KUBE_BURNER_URL="http://people.redhat.com/dcbw/kube-burner-linux-x86_64.tar.gz"
 
     if curl -sS -L "${KUBE_BURNER_URL}" | tar -xzC "${KUBE_DIR}/" kube-burner; then
       echo "Download successful"
